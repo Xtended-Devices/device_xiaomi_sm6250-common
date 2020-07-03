@@ -61,6 +61,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libshim_megvii
 
+# Doze
+PRODUCT_PACKAGES += \
+    XiaomiDoze
+
 # Dirac
 PRODUCT_PACKAGES += \
     Dirac
