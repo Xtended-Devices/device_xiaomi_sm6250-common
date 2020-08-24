@@ -58,6 +58,12 @@ TARGET_SCREEN_WIDTH := 1080
 PRODUCT_PACKAGES += \
     GoogleCameraGo
 
+# GoogleCamera
+ifeq ($(SHIP_GCAM),true)
+PRODUCT_PACKAGES += \
+    Gcam
+endif
+
 PRODUCT_PACKAGES += \
     libshim_megvii
 
