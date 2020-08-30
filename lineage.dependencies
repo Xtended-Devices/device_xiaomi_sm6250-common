@@ -2,5 +2,11 @@
   {
     "repository": "android_hardware_xiaomi",
     "target_path": "hardware/xiaomi"
+  },
+  {
+    "remote": "github",
+    "repository": "Havoc-OS/android_packages_apps_Dirac",
+    "target_path": "packages/apps/Dirac",
+    "branch": "ten"
   }
 ]

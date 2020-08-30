@@ -61,6 +61,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libshim_megvii
 
+# Dirac
+PRODUCT_PACKAGES += \
+    Dirac
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
