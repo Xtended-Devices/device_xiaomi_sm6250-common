@@ -121,6 +121,24 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-service.xiaomi
 
+# Lawnchair
+ifeq ($(SHIP_LAWNCHAIR),true)
+
+PRODUCT_PACKAGES += \
+    Lawnchair
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-lawnchair.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-lawnchair.xml \
+    $(LOCAL_PATH)/configs/permissions/lawnchair-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
+
+PRODUCT_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/lawnchairoverlay
+
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
+    $(LOCAL_PATH)/lawnchairoverlay
+
+endif
+
 # Light
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.xiaomi_sm6250
