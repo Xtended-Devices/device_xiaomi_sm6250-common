@@ -16,6 +16,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
+# ANXCamera
+ifeq ($(SHIP_ANX),true)
+$(call inherit-product, vendor/aeonax/ANXCamera/anx-vendor.mk)
+endif
+
 # AID/fs configs
 PRODUCT_PACKAGES += \
     fs_config_files
