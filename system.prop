@@ -1,3 +1,6 @@
+# Apex
+ro.apex.updatable=true
+
 # Audio
 audio.deep_buffer.media=true
 audio.offload.buffer.size.kb=32
