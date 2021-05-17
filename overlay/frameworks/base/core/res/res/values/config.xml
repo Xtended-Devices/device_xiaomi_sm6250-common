@@ -727,4 +727,7 @@
          Used to decide if the user can change the colors -->
     <bool name="config_multiColorBatteryLed">false</bool>
 
+    <!-- Whether to enable Adaptive Charging -->
+    <bool name="config_supportAdaptiveCharging">true</bool>
+
 </resources>

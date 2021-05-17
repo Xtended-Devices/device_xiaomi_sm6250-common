@@ -19,6 +19,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
+# GAPPS
+ifeq ($(GAPPS),true)
+$(call inherit-product, vendor/gapps/common/common-vendor.mk)
+XTENDED_BUILD_VARIANT := GAPPS
+endif
+
 # MiuiCamera
 $(call inherit-product-if-exists, vendor/xiaomi/miuicamera/config.mk)
 
@@ -297,7 +303,7 @@ PRODUCT_PACKAGES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-arrow
+    $(LOCAL_PATH)/overlay-xtended
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
