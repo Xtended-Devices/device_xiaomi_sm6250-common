@@ -28,3 +28,4 @@ allow platform_app {
 }:hwservice_manager find;
 
 allow platform_app sysfs_zram:dir { search };
+allow platform_app sysfs_zram:file { read };
