@@ -30,6 +30,9 @@ persist.sys.brightness.low.gamma=false
 ro.miui.notch=1
 persist.vendor.camera.privapp.list=com.android.camera
 
+# Charger
+ro.charger.enable_suspend=true
+
 # CNE
 persist.vendor.cne.feature=1
 
